@@ -8,6 +8,7 @@ file_to_load = os.path.join("resources", "election_results.csv")
 # Assign a variable to save the file to a path.
 file_to_save = os.path.join("analysis", "election_analysis.txt")
 
+# 1. The total number of votes cast.
 # Initialize a total vote counter to zero.
 total_votes = 0
 
@@ -29,7 +30,7 @@ with open(file_to_load) as election_data:
     # Read and print the header row.
     headers = next(file_reader)
 
-    # Print each row in the CSV file.
+    # 2. A complete list of candidates who recieved votes and # 3. Total number of votes each candidate recieved.
     for row in file_reader:
         # Add to the total vote count.
         total_votes += 1
@@ -58,7 +59,7 @@ with open(file_to_save, "w") as txt_file:
     # Save the final vote to the text file.
     txt_file.write(election_results)
 
-    # Determine the perecentage of votes for each candidate by looping through the counts.
+    # 4. Percentage of votes each candidate won.
     # Iterate through the candidate list.
     for candidate_name in candidate_votes:
         # Retrieve vote count of a candidate.
@@ -74,7 +75,7 @@ with open(file_to_save, "w") as txt_file:
         # Save the candidate results to our text file.
         txt_file.write(candidate_results)
 
-        # Determine winning vote count and candidate.
+        # 5. The winner of the election based on popular vote.
         # Determine if the votes is greater than the winning count.
         if (votes > winning_count) and (vote_percentage > winning_percentage):
             # If true then set winning_count equal to votes and winning_percent equal to vote_percentage
@@ -104,12 +105,11 @@ with open(file_to_save, "w") as txt_file:
     # To do: perform analysis
     print(election_data)
 
-# The data we need to retrieve
-# 1. The total number of votes cast.
-# 2. A complete list of candidates who recieved votes.
-# 3. Total number of votes each candidate recieved.
-# 4. Percentage of votes each candidate won.
-# 5. The winner of the election based on popular vote. 
-
 # Close the file. -> Put here for now
 election_data.close()
+
+# Challenge Assignment
+# 1. Determine the voter turnout for each county (i.e. total votes per county).
+# 2. Calculate the percentage of votes from each county out of the total count.
+# 3. Determine the county with the highest voter turnout.
+# 4. Print the results to the terminal and save them to your election_analysis.txt file.
