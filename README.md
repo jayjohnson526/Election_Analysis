@@ -20,19 +20,23 @@ In the second portion, we modified our script to also tally the number of votes 
   ![Election Results](resources/images/terminal_election_results.png)
 
   1. *How many votes were cast in this congressional election?*
+  
   There were a total of **369,711 votes** cast in the election.
 
   2. *Provide a breakdown of the number of votes and the percentage of total votes for each county in the precinct.*
+  
   There were three counties that cast votes in this election: Jefferson county, Denver county, and Arapahoe county. To tally the votes by county, we created an if statement within a for loop that checks the county name for each vote and adds it to a a list of counties if the county has not been added already. Then we initialize the county vote to zero and begin tracking votes by county for each row in our election_results.csv file. 
 
   ![Votes by County](resources/images/python_vote_by_county.png)
 
   The results are as follows:
+
     - Jefferson county represented 10.5% of the total vote with 38,855 votes cast.
     - Denver county represented 82.8% of the total vote with 306,055 votes cast.
     - Lastly, Arapahoe county represented 6.7% of the total vote with 24,801 votes cast.
 
   3. *Which county had the largest number of votes?*
+
   Denver county.
 
   To determine which county had the largest number of votes using our script, we created an if statement that checked to see if the votes for that county were greater than the largest vote count (by county) and that percentage of votes from that county out of the total was greater than the largest percentage (by county). 
@@ -41,16 +45,19 @@ In the second portion, we modified our script to also tally the number of votes 
 
   
   4. *Provide a breakdown of the number of votes and the percentage of the total votes each candidate recieved.*
+  
   There were three candidates that recieved votes in this election: Charles Casper Stockham, Diana DeGette, and Anthony Doane. To tally the votes by candidate, we created an if statement within a for loop like we did for counties. Each time a candidate's name appeared in the eleciton_results.csv file, one vote was added to their total.
 
-  ![Votes by Candidate](resources/images/python_vote_by_candidate.png)
+  ![Votes by Candidate](resources/images/python_votes_by_candidate.png)
 
   The results were as follows:
+
     - Charles Casper Stockham recieved 23.0% of the vote with 85,213 votes.
     - Diana DeGette recieved 73.8% of the vote with 272,892 votes.
     - Anthony Doane recieved 3.1% of the vote with 11,606 votes.
 
   5. *Which candidate won the election, what was their vote count, and what was their percentage of the total votes?*
+
   The winner of the election was Diana DeGette, who recieved 73.8% of the vote with 272,892 votes.
 
   Similarly to determining the largest county, the winning cancidate was determined using an if statement checking that both vote count and percentages of total votes for that candidate were greater than the other candidates.
