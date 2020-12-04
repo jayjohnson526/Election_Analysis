@@ -39,7 +39,7 @@ In the second portion, we modified our script to also tally the number of votes 
 
       Denver county.
 
-      To determine which county had the largest number of votes using our script, we created an if statement that checked to see if the votes for that county were greater than the largest vote count (by county) and that percentage of votes from that county out of the total was greater than the largest percentage (by county). 
+      To determine which county had the largest number of votes, we created an if statement that checks if the votes for the county are greater than the largest vote count (by county), AND that the percentage of votes from that county out of the total was greater than the largest percentage (by county). 
 
       ![](resources/images/python_largest_county.png)
 
