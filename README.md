@@ -25,7 +25,7 @@ In the second portion, we modified our script to also tally the number of votes 
 
   2. *Provide a breakdown of the number of votes and the percentage of total votes for each county in the precinct.*
   
-      There were three counties that cast votes in this election: Jefferson county, Denver county, and Arapahoe county. To tally the votes by county, we created an if statement within a for loop that checks the county name for each vote and adds it to a a list of counties if the county has not been added already. Then we initialize the county vote to zero and begin tracking votes by county for each row in our election_results.csv file. 
+      There were three counties that cast votes in this election: Jefferson county, Denver county, and Arapahoe county. To tally the votes by county, we created an if statement within a for loop. The statement checks the county name for each vote and adds it to a a list of counties, if the county has not been added already. Then we initialize the county vote to zero and begin tracking votes by county for each row in our election_results.csv file. 
 
   ![Votes by County](resources/images/python_votes_by_county.png)
 
@@ -39,7 +39,7 @@ In the second portion, we modified our script to also tally the number of votes 
 
       Denver county.
 
-      To determine which county had the largest number of votes, we created an if statement that checks if the votes for the county are greater than the largest vote count (by county), AND that the percentage of votes from that county out of the total was greater than the largest percentage (by county). 
+      To determine which county had the largest number of votes, we created an if statement that checks whether the votes for the county are greater than the largest vote count (by county), AND that the percentage of votes from that county out of the total was greater than the largest county percentage. 
 
       ![](resources/images/python_largest_county.png)
 
